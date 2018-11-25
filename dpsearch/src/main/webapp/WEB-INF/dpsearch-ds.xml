@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.ironjacamar.org/doc/schema"
+	xsi:schemaLocation="http://www.ironjacamar.org/doc/schema http://www.ironjacamar.org/doc/schema/datasources_1_1.xsd">
+	<datasource
+		jndi-name="java:jboss/datasources/dpsearchDS"
+		pool-name="dpsearchDS"
+		enabled="true">
+		<connection-url>jdbc:mysql://localhost:3306/test</connection-url>
+		<driver>mysql</driver>
+		<security>
+			<user-name>root</user-name>
+			<password>admin</password>
+		</security>
+	<!--
+		<validation>
+			<valid-connection-checker
+				class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker" />
+			<background-validation>true</background-validation>
+			<background-validation-millis>60000</background-validation-millis>
+			<exception-sorter
+				class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter" />
+		</validation>
+	-->
+	</datasource>
+</datasources>
